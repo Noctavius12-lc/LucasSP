@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Sapalo | Escritor de Suspense e Ficção</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --text-color: #e0e0e0;
+            --accent-color: #8b0000; /* Vermelho Sangue */
+            --secondary-bg: #1a1a1a;
+            --font-main: 'Georgia', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* Cabeçalho com Atmosfera */
+        header {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1470&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        h1 { 
+            font-size: 3.5rem; 
+            letter-spacing: 10px; 
+            margin: 0; 
+            color: #fff; 
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(139, 0, 0, 0.7);
+        }
+
+        .subtitle { 
+            font-style: italic; 
+            color: var(--accent-color); 
+            font-size: 1.4rem; 
+            margin-top: 10px; 
+            letter-spacing: 2px;
+        }
+
+        .container { 
+            max-width: 850px; 
+            margin: auto; 
+            padding: 50px 20px; 
+        }
+
+        section { margin-bottom: 80px; }
+
+        h2 { 
+            border-left: 5px solid var(--accent-color); 
+            padding-left: 15px; 
+            text-transform: uppercase; 
+            letter-spacing: 3px;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        /* Cartões de Obras */
+        .obras-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+
+        .card { 
+            background: var(--secondary-bg); 
+            padding: 30px; 
+            border: 1px solid #333; 
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover { 
+            border-color: var(--accent-color); 
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Secção de Apoio (Monetização) */
+        .apoio-section {
+            background: var(--secondary-bg);
+            border: 2px solid var(--accent-color);
+            padding: 40px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .btn-apoio {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 25px;
+            transition: 0.3s;
+            letter-spacing: 1px;
+            border-radius: 4px;
+        }
+
+        .btn-apoio:hover {
+            background-color: #ff0000;
+            box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* Newsletter */
+        .newsletter { 
+            text-align: center; 
+            padding: 60px 40px; 
+            background: #000; 
+            border-top: 1px solid #222;
+        }
+
+        input[type="email"] { 
+            padding: 12px; 
+            width: 280px; 
+            background: #111; 
+            border: 1px solid #444; 
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        button.btn-subscribe { 
+            padding: 12px 25px; 
+            background: var(--accent-color); 
+            color: #fff; 
+            border: none; 
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button.btn-subscribe:hover {
+            background: #ff0000;
+        }
+
+        footer { 
+            text-align: center; 
+            padding: 50px; 
+            font-size: 0.9rem; 
+            color: #555; 
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            input[type="email"] { width: 100%; margin-bottom: 10px; }
+            .btn-apoio { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LUCAS SAPALO</h1>
+        <p class="subtitle">Entre a realidade e o abismo</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="sobre">
+            <h2>Sobre o Autor</h2>
+            <p>
+                Lucas Sapalo transita pelas sombras da ficção para iluminar os medos mais profundos da mente humana. 
+                De suspenses psicológicos que tiram o fôlego a aventuras épicas em mundos esquecidos, 
+                sua escrita é um convite ao desconhecido. Cada página é uma nova porta aberta para o extraordinário.
+            </p>
+        </section>
+
+        <section id="obras">
+            <h2>Obras & Pesadelos</h2>
+            <div class="obras-grid">
+                <div class="card">
+                    <h3>Sussurros no Escuro</h3>
+                    <p>Contos de terror e suspense onde o maior perigo é o que não se pode ver.</p>
+                </div>
+                <div class="card">
+                    <h3>Além do Horizonte</h3>
+                    <p>Ficção e aventura épica. Jornadas por terras áridas e mistérios ancestrais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="apoio-section">
+            <h2>Mantenha a Vela Acesa</h2>
+            <p>Gosta das minhas histórias? Contribua com o autor para que novas tramas continuem a surgir das sombras.</p>
+            
+            <a href="https://www.paypal.com/paypalme/SEU_USUARIO" target="_blank" class="btn-apoio">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 3.326a.93.93 0 0 1 .917-.787h8.426c1.584 0 2.845.339 3.748 1.011s1.359 1.673 1.359 3.004c0 1.057-.184 2.008-.551 2.852s-.91 1.556-1.626 2.137c-.717.581-1.597.986-2.642 1.214s-2.227.342-3.548.342h-.828c-.37 0-.7.256-.778.618l-1.328 6.13a.641.641 0 0 1-.629.505H7.076z"/>
+                </svg>
+                Oferecer um Café
+            </a>
+        </section>
+
+    </div>
+
+    <section class="newsletter">
+        <h3>Junte-se ao Círculo das Sombras</h3>
+        <p>Receba novos contos e atualizações diretamente no seu e-mail.</p>
+        <form>
+            <input type="email" placeholder="Seu e-mail mais sombrio..." required>
+            <button type="submit" class="btn-subscribe">ASSINAR</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Lucas Sapalo. Todos os direitos reservados às sombras.</p>
+    </footer>
+
+</body>
+</html>
